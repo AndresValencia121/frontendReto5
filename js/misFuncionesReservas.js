@@ -43,7 +43,7 @@ function agregarReservation() {
             startDate: $("#startDate").val(),
             devolutionDate: $("#devolutionDate").val(),
             status: $("#status").val(),
-            skate:{id: +$("#select-disfraz").val()},
+            costume:{id: +$("#select-disfraz").val()},
             client:{idClient: +$("#select-client").val()},
             
         }
@@ -80,6 +80,7 @@ function agregarReservation() {
 
 
 function listarReservation(){
+    console.log("test");
     $.ajax({
         url:"http://155.248.202.105:8080/api/Reservation/all",
         //url: "http://localhost:8080/api/Reservation/all",
@@ -96,11 +97,15 @@ function pintarRespuestaReservation(response){
    
     let myTable="<table>";
     myTable+="<tr>";
-        myTable+="<td>Fecha Inicio</td>";
-        myTable+="<td>fecha Devolucion</td>";
-        myTable+="<td>Estado</td>";
-        myTable+="<td>Patineta</td>";
-        myTable+="<td>Cliente</td>";
+        myTable+="<caption><h3>Detalle de Reservaciones</h3></caption>"
+        myTable+="<th>Fecha Inicio</th>";
+        myTable+="<th>Fecha Devolucion</th>";
+        myTable+="<th>Estado</th>";
+        myTable+="<th>Cliente</th>";
+        myTable+="<th>Disfraz</th>";
+        myTable+="<th>Borrar</th>";
+        myTable+="<th>Editar</th>";
+        myTable+="<th>Actualizar</th>";
      "</tr>";
       
     for(i=0;i<response.length;i++){
@@ -108,11 +113,11 @@ function pintarRespuestaReservation(response){
         myTable+="<td>"+response[i].startDate+"</td>";
         myTable+="<td>"+response[i].devolutionDate+"</td>";
         myTable+="<td>"+response[i].status+"</td>";
-        myTable+="<td>"+response[i].skate.name+"</td>";
         myTable+="<td>"+response[i].client.name+"</td>";
-        myTable+='<td><button  onclick="borrarReservation(' + response[i].idReservation + ')">Borrar Reserva!</button></td>';
-        myTable+='<td><button  onclick="cargarDatosReservation(' + response[i].idReservation + ')">Editar Reserva!</button></td>';
-        myTable+='<td><button  onclick="actualizarReservation(' + response[i].idReservation + ')">Actualizar Reserva!</button></td>';
+        myTable+="<td>"+response[i].costume.name+"</td>";
+        myTable+='<td><button  onclick="borrarReservation(' + response[i].idReservation + ')">Borrar Reserva</button></td>';
+        myTable+='<td><button  onclick="cargarDatosReservation(' + response[i].idReservation + ')">Editar Reserva</button></td>';
+        myTable+='<td><button  onclick="actualizarReservation(' + response[i].idReservation + ')">Actualizar Reserva</button></td>';
         myTable+="</tr>";
     }
     myTable+="</table>";

@@ -14,9 +14,10 @@ function pintarRespuesta(respuesta){
 
     let myTable="<table>";
     myTable+="<tr>";
-       myTable+="<th>completadas</th>";
+    myTable+="<caption><h3>Detalle de Reservas por Status</h3></caption>"
+       myTable+="<th>Completadas</th>";
         myTable+="<td>"+respuesta.completed+"</td>";
-        myTable+="<th>canceladas</th>";
+        myTable+="<th>Canceladas</th>";
         myTable+="<td>"+respuesta.cancelled+"</td>";
         myTable+="</tr>";
     myTable+="</table>";
@@ -42,14 +43,22 @@ function traerReporteDate(){
     function pintarRespuestaDate(respuesta){
 
         let myTable="<table>";
+        myTable+="<caption><h3>Detalle de Reservas por Fecha</h3></caption>"
         myTable+="<tr>";
+        myTable+="<th>Fecha Devolución</th>";
+        myTable+="<th>Fecha de Inicio</th>";
+        myTable+="<th>Cliente</th>";
+        myTable+="<th>Estatus</th>";
+        
+        "</tr>";
+        
           
         for(i=0;i<respuesta.length;i++){
-        myTable+="<th>total</th>";
+            myTable+="<tr>";
             myTable+="<td>"+respuesta[i].devolutionDate+"</td>";
             myTable+="<td>"+respuesta[i].startDate+"</td>";
+            myTable+="<td>"+respuesta[i].client.name+"</td>";
             myTable+="<td>"+respuesta[i].status+"</td>";
-          
           
             myTable+="</tr>";
         }
@@ -71,10 +80,18 @@ function traerReporteDate(){
     function pintarRespuestaClientes(respuesta){
 
         let myTable="<table>";
+        myTable+="<caption><h3>Detalle de Reservas por Cliente</h3></caption>"
         myTable+="<tr>";
+        myTable+="<th>Total</th>";
+        myTable+="<th>Cliente</th>";
+        myTable+="<th>Email</th>";
+        myTable+="<th>Edad</th>";
+        "</tr>";
+
+        
           
         for(i=0;i<respuesta.length;i++){
-        myTable+="<th>total</th>";
+            myTable+="<tr>";
             myTable+="<td>"+respuesta[i].total+"</td>";
             myTable+="<td>"+respuesta[i].client.name+"</td>";
             myTable+="<td>"+respuesta[i].client.email+"</td>";

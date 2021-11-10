@@ -1,3 +1,13 @@
+h2{
+    padding: 0;
+    margin: 0;
+    font: normal 30px Arial, sans-serif;
+    color: #020202;
+    text-align: center; 
+}
+
+/** Estilos del head **/
+
 #cabeceralogo {
     width: 96%;
     height: 200px;
@@ -18,51 +28,260 @@
     font: bold 54px Arial, sans-serif;
     color: #ffffff;
     text-align: center;
+    width: 400px;
+    background-color: #020202;
+    margin: 70px 0 0 250px;
 }
 
 #baner{
-    font: bold 54px Arial, sans-serif;
+    font: bold 40px Arial, sans-serif;
     color: #020202;
     text-align: center; 
 }
+
+/** Estilos de la barra de Menu **/
 
 #menuprincipal {
 width: 96%;
 height: 50px;
 padding: 0% 2%;
-background-color: #6d89a8;
+background-color: #181a1d;
 border-top: 1px solid #443e41;
 border-bottom: 1px solid #443e41;
 }
 
 #menuprincipal > div {
-width: 960px;
+width: 100%;
 margin: 0px auto;
+text-align: center;
 }
 
 #menuprincipal li {
+    
     display: inline-block;
-    height: 35px;
+    height: 3%;
     padding: 15px 10px 0px 10px;
     margin-right: 5px;
 }
 
 #menuprincipal li:hover {
-    background-color: #93baec;
+    background-color: #f81c1c;
 }
 
 #menuprincipal a {
     font: bold 18px Arial, sans-serif;
-    color: #030303;
+    color: #ffffff;
     text-decoration: none;
 }
 
-/*Estilos de la tabla*/
+#menuprincipal a:hover {
+    font: bold 18px Arial, sans-serif;
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/*Estilos de las tablas*/
+
 table, th, td {
     border: 1px solid rgb(0, 42, 70);
     border-collapse: collapse;
     padding: 5px;
 }
+
+/** Estilos del Body **/
+
+.cuerpo{
+    width: 98%;
+    margin-top: 1.5%;
+    padding: 1%;
+    background-color: rgb(245, 245, 245);
+}
+
+/** Estilo para las imagenes del index **/
+
+.imagenes{
+    width: 98%;
+    margin-top: 1%;
+    padding: 1%;
+    background-image: url(https://previews.123rf.com/images/insh1na/insh1na1709/insh1na170900283/86422824-fondo-con-telara%C3%B1a.jpg);
+    background-size: contain;
+    text-align: center;
+}
+
+.img1{
+    width: 12%;
+    height: 150px;
+    background-image: url(https://www.tuexperto.com/wp-content/uploads/flickr_backup/3548837464_593fc50131_o.jpg);
+    background-size: cover;
+    display: inline-block;
+}
+
+.img2{
+    width: 12%;
+    height: 150px;
+    background-image: url(https://i.pinimg.com/564x/a8/eb/50/a8eb50b0b8a9b0f77eb3dcd889d32b71--ghostbusters-prince.jpg);
+    background-size: cover;
+    display: inline-block;
+}
+
+.img3{
+    width: 12%;
+    height: 150px;
+    background-image: url(https://laverdadnoticias.com/__export/1633121223100/sites/laverdad/img/2021/10/01/halloween_disfraz.jpg_650236105.jpg);
+    background-size: cover;
+    display: inline-block;
+}
+
+.img4{
+    width: 12%;
+    height: 150px;
+    background-image: url(https://aws.glamour.es/prod/designs/v1/assets/666x1000/520247.jpg);
+    background-size: cover;
+    display: inline-block;
+}
+
+.img5{
+    width: 12%;
+    height: 150px;
+    background-image: url(https://i.pinimg.com/originals/45/6c/fd/456cfd5246d25ac8a66e92bc6b326942.jpg);
+    background-size: cover;
+    display: inline-block;
+}
+
+.img6{
+    width: 12.5%;
+    height: 150px;
+    background-image: url(https://cosascaseras.com/wp-content/uploads/sites/2/2015/11/166-como-hacer-disfraz-de-capitan-america-2.jpg);
+    background-size: cover;
+    display: inline-block;
+}
+
+.img7{
+    width: 12%;
+    height: 150px;
+    background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/disfraces-originales-beetlejuice-1631803820.jpg?crop=1xw:1xh;center,top&resize=480:*);
+    background-size: cover;
+    display: inline-block;
+}
+
+.img8{
+    width: 12%;
+    height: 150px;
+    background-image: url(https://static.guiainfantil.com/media/2789/c/los-disfraces-express-de-halloween-lg.jpg);
+    background-size: cover;
+    display: inline-block;
+}
+
+/** Estilos del footer o pie de pagina **/
+
+footer{
+    width: 98%;
+    margin-top: 1%;
+    padding: 1%;
+    background-color: black;
+    text-align: center;
+}
+
+footer a{
+    font: 12px Arial, sans-serif;
+    color: #ffffff;
+    /**text-decoration: none;**/
+    margin: 3%;
+}
+
+/** Estilo de los imput y los butons **/
+
+.botonera{
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+button{
+    width: auto;
+    height: 35px;
+    background-color: rgb(233, 230, 230);
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+button:hover{
+    background-color: rgb(236, 40, 40);
+    font: bold 12px Arial, sans-serif;
+    
+}
+
+.cajas{
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+input{
+    width: 30%;
+    height: 30px;
+    font: bold 16px Arial, sans-serif;
+    margin: 10px;
+    text-align: center;
+}
+
+label{
+    width:100px;
+    height: 30px;
+    font: bold 14px Arial, sans-serif;
+    text-align: center;
+}
+
+select{
+    width: 30%;
+    height: 38px;
+    font: bold 14px Arial, sans-serif;
+    text-align: center;
+    margin: 10px;
+}
+
+
+/** Estilos del contenedor de la tabla **/
+
+.contenedorTabla{
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+.contenedorTabla table{
+    width: 98%;
+    margin: 1% 0 0 1%;
+    font: normal 14px Arial, sans-serif;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    color: black;
+}
+
+.contenedorTabla table th{
+    height: 38px;
+    font-size: 18px;
+    border: 1px solid black;
+    background-color: cornflowerblue;
+}
+
+.contenedorTabla table td{
+    border: 1px solid black;
+    
+}
+
+.contenedorTabla table tr{
+    border: solid black;
+    
+}
+
+
+
+/**
+
 
 main {
     width: 96%;

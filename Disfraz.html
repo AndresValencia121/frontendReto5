@@ -20,34 +20,60 @@
     <nav id="menuprincipal">
         <div>
             <ul>
-                <li><a href="index.html">Principal</a></li>
-                <li><a href="Reportes.html">Reportes</a></li>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="Categorias.html">Categorias</a></li>
-                <li><a href="Clientes.html">Clientes</a></li>
-                <li><a href="Mensajes.html">Mensajes</a></li>
-                <li><a href="Reservaciones.html">Reservaciones</a></li>
                 <li><a href="Disfraz.html">Disfraces</a></li>
+                <li><a href="Clientes.html">Clientes</a></li>
+                <li><a href="Reservaciones.html">Reservaciones</a></li>
+                <li><a href="Mensajes.html">Mensajes</a></li>
+                <li><a href="Reportes.html">Reportes</a></li>
             </ul>
         </div>
     </nav>
+    <br>
+    <div class="cajas">
+        <label>Nombre</label>
+        <br>
+        <input class="controlDisfraz" type="text" id="name2" placeholder="escribe el nombre">
+        <br>
+        <label>Marca</label>
+        <br>
+        <input class="controlDisfraz" type="text" id="brand" placeholder="escribe la marca">
+        <br>
+        <label>Año</label>
+        <br>
+        <input class="controlDisfraz" type="number" id="year" placeholder="escribe solo el año">
+        <br>
+        <label>Descripción</label>
+        <br>
+        <input class="controlDisfraz" type="text" id="description2" placeholder="escribe la descripcion">
+        <br>
+        <label>Categoría</label>
+        <br>
+        <select id="select-category"></select>
+        <script type="text/javascript">
+            window.onload = autoInicioCategoria();
+        </script>
+    </div>
 
-    <label>NAME:</label>
-    <input class="controlDisfraz" type="text" id="name2" placeholder="escribe el nombre"><br>
-    <label>MODEL:</label>
-    <input class="controlDisfraz" type="text" id="brand" placeholder="escribe la marca"><br>
-    <label>YEAR:</label>
-    <input class="controlDisfraz" type="number" id="year" placeholder="escribe solo el año"><br>
-    <label>DESCRIPTION:</label>
-    <input class="controlDisfraz" type="text" id="description2" placeholder="escribe la descripcion"><br>
-    <select id="select-category"></select>
-    <script type="text/javascript">
-        window.onload = autoInicioCategoria();
-    </script>
-
-    <div id="miListaDisfraz"></div>
-    <button onclick="traerInformacionDisfraz()"> Consultar Disfraz</button>
-
+    <div class="botonera">
+        <button onclick="traerInformacionDisfraz()"> Consultar Disfraz</button>
     <button onclick="agregarDisfraz()">Guardar Disfraz</button>
+    </div>
+    <br>
+    <div class="contenedorTabla">
+        <div id="miListaDisfraz"></div>
+    </div>
+    <br>
+    <footer>
+        <div>
+            <a class="enlacesFooter" href="#">Acerca de nosotros</a>
+            <a class="enlacesFooter" href="#">Terminos y condiciones</a>
+            <a class="enlacesFooter" href="#">Manual de usuario</a>
+            <a class="enlacesFooter" href="#">Mesa de ayuda</a>
+        </div>
+        
+    </footer>
 
 </body>
 

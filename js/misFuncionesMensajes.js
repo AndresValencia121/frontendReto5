@@ -52,6 +52,15 @@ function autoInicioMensajes(){
 function pintarRespuestaMensajes(respuesta){
 
     let myTable="<table>";
+    myTable+="<tr>";
+        myTable+="<caption><h3>Detalle de Mensajes</h3></caption>"
+        myTable+="<th>Mensaje</th>";
+        myTable+="<th>Disfraz</th>";
+        myTable+="<th>Cliente</th>";
+        myTable+="<th>Actualizar</th>";
+        myTable+="<th>Borrar</th>";
+    "</tr>";
+
     for(i=0;i<respuesta.length;i++){
         myTable+="<tr>";
         

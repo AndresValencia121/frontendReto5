@@ -35,11 +35,15 @@ function pintarRespuestaDisfraz(response){
 
     let myTable="<table>"
     myTable+="<tr>";
+    myTable+="<caption><h3>Catalogo de Disfraces</h3></caption>"
         myTable+="<th>Nombre</th>";
         myTable+="<th>Modelo</th>";
         myTable+="<th>Año</th>";
         myTable+="<th>Descripcion</th>";
         myTable+="<th>Categoria</th>";
+        myTable+="<th>Borrar</th>";
+        myTable+="<th>Editar</th>";
+        myTable+="<th>Actualizar</th>";
     "</tr>";
 
     for(i=0;i<response.length;i++){
@@ -49,9 +53,9 @@ function pintarRespuestaDisfraz(response){
         myTable+="<td>" + response[i].year + "</td>";
         myTable+="<td>" + response[i].description + "</td>";
         myTable+="<td>" + response[i].category.name + "</td>";
-        myTable+='<td><button class = "botonDisfraz2" onclick="borrar(' + response[i].id + ')">Borrar Disfraz!</button></td>';
-        myTable+='<td><button class = "botonDisfraz2" onclick="cargarDatosDisfraz(' + response[i].id + ')">Editar Disfraz!</button></td>';
-        myTable+='<td><button class = "botonDisfraz2" onclick="actualizar(' + response[i].id + ')">Actualizar Disfraz!</button></td>';
+        myTable+='<td><button class = "botonDisfraz2" onclick="borrar(' + response[i].id + ')">Borrar Disfraz</button></td>';
+        myTable+='<td><button class = "botonDisfraz2" onclick="cargarDatosDisfraz(' + response[i].id + ')">Editar Disfraz</button></td>';
+        myTable+='<td><button class = "botonDisfraz2" onclick="actualizar(' + response[i].id + ')">Actualizar Disfraz</button></td>';
         myTable+="</tr>";
     }
     myTable+="</table>";
@@ -187,7 +191,8 @@ function actualizar(idElemento) {
             success: function (response) {
                 console.log(response);
                 $("#miListaDisfraz").empty();
-                listarDisfraz();
+                traerInformacionDisfraz()
+                //listarDisfraz();
                 alert("se ha Actualizado Correctamente!")
 
                 //Limpiar Campos
